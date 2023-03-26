@@ -1,0 +1,42 @@
+<%- include('../layout/header.ejs')%>
+<section class="vh-100 bg-image"
+  style="background-image: url('https://media.istockphoto.com/id/506177878/photo/chalkboard-back-to-school-theme.jpg?b=1&s=170667a&w=0&k=20&c=DxQK_ChVu4t-mFA1e51RDFZHJux5NSLwREz6UCXZVDk=');">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;background-color: rgba(32, 31, 31, 0.365);">
+            <div class="card-body p-5 text-center bg-color" style=" height: 500px;">
+              <% if (typeof message !== 'undefined') {
+            %>
+            <p style="color: coral;"><%= message %></p>
+            <%
+          }
+             %>
+              <h3 class="mb-5 text-secondary">Log in</h3>
+                <form action="/login" method="post" id="login">
+              <div class="form-outline mb-4">
+                <input name="email" type="email" id="typeEmailX-2" class="form-control form-control-lg bg-secondary transparent-input"" />
+                <label class="form-label" for="typeEmailX-2">Email</label>
+              </div>
+  
+              <div class="form-outline mb-4">
+                <input name="password" type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                <label class="form-label" for="typePasswordX-2">Password</label>
+              </div>
+  
+             
+  
+              <button class="btn btn-secondary btn-lg btn-block" type="submit">Login</button>
+            </form>
+              <hr class="my-4">
+              <button class="btn btn-lg btn-block btn-secondary mb-2 "  style="background-color: rgba(32, 31, 31, 0.365);"
+                type="submit"><i class=" me-2"></i><a class="text-light text-decoration-none" href="/register" >Dont have acount? Register</a> </button>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  
+<% include('../layout/footer.ejs')%> 
